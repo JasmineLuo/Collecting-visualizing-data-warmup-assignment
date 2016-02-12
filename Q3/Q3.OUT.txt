@@ -1,0 +1,63 @@
+""
+""
+avg_score
+89.7111111111111
+"''"
+""
+id,name,score
+770785936,"War Child",50
+13486,Warlock,53
+287865052,"The Protector (Tom yum goong) (Warrior King)",55
+10008,"Star Wars: Episode I - The Phantom Menace",57
+173520258,"How I Won the War",58
+13134,"To End All Wars",58
+12975,"The Milagro Beanfield War",59
+14422,"Hart's War",60
+"''"
+""
+cast_id,cast_name,movie_count
+507677272,"Ahmed Best",3
+770705336,"Alan Bennett",3
+162659309,"Andy Lau",3
+326433996,"Bill Clinton",3
+162656403,"Billy Dee Williams",3
+770689750,"Boyd 'Red' Morgan",3
+162652385,"Christopher Lee",3
+162652837,"Christopher Walken",3
+162665297,"Colin Farrell",3
+162652764,"Dakota Fanning",3
+"''"
+""
+cast_id,cast_name,avg_score
+162655900,"Alec Guinness",90.0
+162663355,"Carrie Fisher",90.0
+603676177,"David Prowse",90.0
+768117486,"Denis Lawson",90.0
+162661579,"Harrison Ford",90.0
+162665747,"Mark Hamill",88.0
+162655731,"James Earl Jones",87.5
+425838884,"Peter Mayhew",87.5
+162654047,"Tilda Swinton",86.6666666666667
+358317901,"Jeremy Bulloch",85.3333333333333
+"''"
+""
+"''"
+""
+cast_id,cast_name,avg_good_collab_score
+162655731,"James Earl Jones",85.3333333333333
+418638213,"Kenny Baker",85.3333333333333
+425838884,"Peter Mayhew",85.3333333333333
+358317901,"Jeremy Bulloch",85.3333333333333
+162656296,"Frank Oz",80.6666666666667
+"''"
+""
+count(*)
+8
+id
+335
+7508
+9081
+10435
+277216
+"''"
+""

@@ -1,0 +1,1 @@
+FTS "match" query is faster than basic SQL "like" query. FTS can use  built-in-full-text indexes, but not all cases in "LIKE" command in basic SQL build indexes (only work on character pattern). It's often the case that query in indexed information is much faster than query in unstructured text data.

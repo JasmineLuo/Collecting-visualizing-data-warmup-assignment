@@ -1,0 +1,2 @@
+Force Atlas 2 is used for layout, in which Linlog mode and Prevent overlap is on, scaling = 25, gravity = 15;
+Node size and color are based on degree.

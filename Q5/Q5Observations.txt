@@ -1,0 +1,11 @@
+c(i):
+By picking the textfacet and cluster data, I can see the all possible clusters for the current colum content. For the same meaning, some are suggested because of redundent words or lowercases, and some are given because of adding meaningless symbols( such as '?]['). After cluster, the selected groups have all uniform expression. For example, 'dinner', '(DINNER)' and '[DINNER?]' all become standard expression: DINNER.
+
+
+c(iii);
+Only contain nominal data: Currency column;
+Only ordinal data: Id;
+
+
+c(v):
+By using " value.replace('XXX','YYY') "; we can replace XXX content into YYY within column. I think it usefull to replace meaningless symbols such as '#[]?' in unexpected cases. This order can also be chained -- followed by multiple replace arguements.

@@ -1,0 +1,47 @@
+create table movies(id integer, name text, score integer);
+.mode csv
+.import /Users/luozhongyi/Desktop/2016Spring/CSE6242/hw1/movie­-name­-score.txt movies
+create table moviecast(movie_id integer, cast_id integer, cast_name text);
+.mode csv
+.import /Users/luozhongyi/Desktop/2016Spring/CSE6242/hw1/movie­-cast.txt moviecast
+select '';
+
+create index movies_primary_index on movies (id);
+create index movies_secondary_index on moviecast (m​ovie_id);
+select '';
+
+.headers on
+select avg(score) as avg_score from movies where score>=80;
+select '';
+
+.headers on
+select * from movies where score>=50 order by score, name asc limit 8;
+select '';
+
+.headers on
+select cast_id, cast_name, count(cast_name) as movie_count from moviecast group by cast_name having count(cast_name)=3 order by cast_name limit 10;
+select '';
+
+.headers on
+select cast_id, cast_name, avg(movies.score) as avg_score from moviecast join movies on (movie_id=id and movies.score >=50) group by cast_name having count(cast_name)>=3 order by avg(movies.score) desc, cast_name asc limit 10;
+select '';
+
+.headers on
+create view good_collaboration as select a.cast_id as cast_member_id1, b.cast_id as cast_member_id2, avg(movies.score) as avg_movie_score, count(*) as movie_count from moviecast a join moviecast b on (a.movie_id=b.movie_id and a.cast_id != b.cast_id) join movies on (a.movie_id=movies.id) group by cast_member_id1, cast_member_id2 having movie_count>=3 and avg(movies.score)>=75; 
+select '';
+
+.headers on
+select cast_member_id1 as cast_id, cast_name, avg(avg_movie_score) as avg_good_collab_score from good_collaboration join moviecast on (cast_member_id1=moviecast.cast_id) group by cast_member_id1 order by avg_good_collab_score desc limit 5;
+select ''; 
+
+CREATE VIRTUAL TABLE movie_overview USING fts4(id integer, name text, year integer, overview text, popularity decimal);
+.mode csv
+.import /Users/luozhongyi/Desktop/2016Spring/CSE6242/hw1/movie-overview.txt movie_overview
+select count(*) from movie_overview where overview match 'good OR bad';
+select id from movie_overview where overview match 'life NEAR/5 about';
+select '';
+
+
+
+
+

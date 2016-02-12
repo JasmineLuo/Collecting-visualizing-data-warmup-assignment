@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>D3 Test</title>
+        <script type="text/javascript" src="d3/d3.v3.js"></script>
+        <style type="text/css">
+        div.bar {
+            display: inline-block;
+            width: 20px;
+            height: 75px;   /* We'll override this later */
+            margin-right: 2px;
+            background-color: teal;
+            }
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript">
+            // Your beautiful D3 code will go here          
+            body=d3.select("body");
+            var dataset = [ 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25];
+            var bars= body.selectAll('div')
+            .data(dataset)
+            .enter()
+            .append("div")
+            .attr("class","bar");
+
+            bars.style("height", function(d) {
+            var barHeight;  //Scale up by factor of 5
+            if (d%5==0) barHeight= 5 * 25;
+            else barHeight=(d %5) * 25;
+                return barHeight + "px";
+            });
+
+            bars.style("background-color",function(d) {
+                var colora;
+                if (d > 20) colora="red";
+                else if ( d<=20 && d> 15) colora="yellow";
+                else if ( d<=15 && d> 10) colora="blue";
+                else if ( d<=10 && d> 5) colora="green";
+                else colora="black";
+                return colora;
+            });
+
+            d3.select("body").append("p").text("Zhongyi Luo");
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+Average node degree:
+2.092
+Refers to the average number of node that each node connects to (the average similar movies for movies in the list).In degree distribution, apart from 7 node have degree over 5, rest are around degree 1.
+
+Diameter of the graph:
+16
+Refers to the longest path among all shortest paths. Apart from the ones not connected. A movie can always reach to any other movie within 26 "similar movie" hops.
+
+Average path length:
+8.6968
+Refers to the average value of all available shortest paths. As long as two movies are connected, it takes around 8.6968 hops to for one to link another.
+
+5 Highest PageRank movie:
+Mad Max: 0.00749647
+The wolf of Wall Street: 0.00683581
+A Beautiful Mind: 0.00561534
+The Shawshank Redempt: 0.0053817
+Rebecca: 0.0053817
